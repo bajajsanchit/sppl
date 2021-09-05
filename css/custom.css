@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	font-family: "Inter", sans-serif;
 	font-weight: 400;
@@ -165,4 +169,91 @@ body {
 
 .features_item + .features_item {
 	border: none;
+}
+
+.social_icon > li > a > i {
+	color: #777777;
+}
+
+.top_btn > a {
+	color: #777777;
+}
+
+.header_area .navbar .nav .nav-item .nav-link {
+	font-size: 13px;
+}
+
+.banner_content h6 {
+	font-size: 18px;
+}
+
+.animate-arrow {
+	transition: 0.3s ease all;
+}
+
+.know-more {
+	transition: 0.3s ease all;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.know-more:hover {
+	text-decoration: underline 1px solid black;
+}
+
+.know-more:hover .animate-arrow {
+	transform: rotate(-45deg);
+}
+
+.know-more-link {
+	color: black;
+	transition: 0.3s ease all;
+	font-weight: 500;
+}
+
+.know-more-link:hover {
+	color: black;
+	opacity: 0.9;
+	font-weight: 500;
+}
+
+.footer-area {
+	padding: 80px 0;
+}
+
+@media (max-width: 990px) {
+	.special-reverse {
+		flex-direction: column-reverse;
+	}
+}
+
+.top-btn {
+	padding: 1rem;
+	background-color: #febd01;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s ease all;
+	cursor: pointer;
+	z-index: 100;
+	display: flex;
+	transform: translateX(200px);
+}
+
+.active-scroll {
+	transform: translateX(0);
+}
+
+.top-btn:hover {
+	opacity: 0.8;
+}
+
+.top-btn > i {
+	color: black;
+	font-size: 1.3rem;
 }

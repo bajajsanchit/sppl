@@ -29,7 +29,7 @@
 				nav: false,
 				autoplay: true,
 				dots: false,
-				smartSpeed: 1500,
+				smartSpeed: 1000,
 				responsiveClass: true,
 				responsive: {
 					0: {
@@ -292,3 +292,23 @@
 		});
 	}
 })(jQuery);
+
+let scrollTopButton = document.querySelector(".top-btn");
+window.onscroll = function () {
+	scrollAnimation();
+};
+
+function scrollAnimation() {
+	if (document.body.scroll > 150 || document.documentElement.scrollTop > 150) {
+		scrollTopButton.classList.add("active-scroll");
+	} else {
+		scrollTopButton.classList.remove("active-scroll");
+	}
+}
+
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
+
+scrollTopButton.addEventListener("click", topFunction);
